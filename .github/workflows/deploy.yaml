@@ -5,7 +5,9 @@ on:
     branches:
       - master
 
-permissions: write-all
+permissions:
+  packages: write
+  contents: read
 
 jobs:
   prep:

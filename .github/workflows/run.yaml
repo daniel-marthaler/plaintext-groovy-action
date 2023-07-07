@@ -1,0 +1,20 @@
+name: run
+
+on:
+  workflow_dispatch: 
+
+permissions: write-all
+
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    outputs:
+      targets: ${{ steps.read-targets.outputs.targets }}
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+
+      - name: 'Groovy'
+        id: groovy
+        uses: daniel-marthaler/plaintext-groovy-action@master

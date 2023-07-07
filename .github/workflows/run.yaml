@@ -18,3 +18,5 @@ jobs:
       - name: 'Groovy'
         id: groovy
         uses: daniel-marthaler/plaintext-groovy-action@master
+        with:
+          script: go.groovy

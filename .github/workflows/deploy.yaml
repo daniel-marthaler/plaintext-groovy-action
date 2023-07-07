@@ -14,8 +14,14 @@ jobs:
       targets: ${{ steps.read-targets.outputs.targets }}
 
     steps:
+
       - name: Check out the repo
         uses: actions/checkout@v3
+
+      - name: 'Prepare'
+        id: prep
+        run: |
+          chmod +x ./entrypoint.sh
 
       - name: Log in to the Container registry
         uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1

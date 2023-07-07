@@ -8,11 +8,21 @@ inputs:
   port:
     description: 'port'
     default: "22"
-    
-runs:
-  using: 'docker'
-  image: 'ghcr.io/daniel-marthaler/plaintext-groovy-action:master'
 
-branding:
-  icon: 'terminal'
-  color: 'gray-dark'
+runs:
+  using: 'composite'
+
+  steps:
+
+    - name: 'Run docker'
+      id: run-docker
+      shell:
+      run: |
+
+        docker run \
+        --rm \
+        -e SONAR_HOST_URL="a" \
+        -e SONAR_SCANNER_OPTS="b" \
+        -e SONAR_TOKEN="c" \
+        -v "./:/data" \
+        ghcr.io/daniel-marthaler/plaintext-groovy-action:master

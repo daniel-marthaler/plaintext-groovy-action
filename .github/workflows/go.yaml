@@ -1,0 +1,20 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - master
+
+permissions: write-all
+
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    outputs:
+      targets: ${{ steps.read-targets.outputs.targets }}
+
+    steps:
+
+      - name: 'Groovy'
+        id: groovy
+        uses: daniel-marthaler/plaintext-groovy-action@master

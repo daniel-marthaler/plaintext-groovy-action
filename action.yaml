@@ -3,14 +3,15 @@ description: 'Executing groovy scripts in a doker container'
 author: 'Daniel Marthaler'
 inputs:
   host:
-    description: 'SSH host address.'
+    description: 'host'
+    default: "host"
   port:
-    description: 'SSH port number.'
+    description: 'port'
     default: "22"
     
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'ghcr.io/daniel-marthaler/plaintext-groovy-action:master'
 
 branding:
   icon: 'terminal'

@@ -1,4 +1,4 @@
-name: 'SSH Remote Commands'
+name: 'Groovy'
 description: 'Executing groovy scripts in a doker container'
 author: 'Daniel Marthaler'
 inputs:

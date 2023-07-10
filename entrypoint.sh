@@ -1,7 +1,7 @@
 #!/bin/sh
 
-#export JAVA_HOME=/usr/java/jdk1.8.0_31
-#export PATH=$JAVA_HOME/bin:$PATH
+export JAVA_HOME=/opt/java/openjdk
+export PATH=$JAVA_HOME/bin:$PATH
 
 printenv
 

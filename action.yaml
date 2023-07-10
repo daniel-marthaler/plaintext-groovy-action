@@ -13,6 +13,7 @@ runs:
 
     - name: 'Run docker'
       id: run-docker
+      shell: bash
       run: |
         printenv >> .env
         docker run --env-file .env \

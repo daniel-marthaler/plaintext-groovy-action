@@ -16,8 +16,10 @@ runs:
       shell: bash
       run: |
         printenv >> .env
-        docker run --env-file .env \
+        docker run  \
         --rm \
         -e SCRIPT="${{ inputs.script }}" \
         -v "${{ github.workspace }}:/workspace" \
         ghcr.io/daniel-marthaler/plaintext-groovy-action:master
+        
+        # --env-file .env

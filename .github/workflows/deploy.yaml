@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  prep:
+  deployImage:
     runs-on: ubuntu-latest
     outputs:
       targets: ${{ steps.read-targets.outputs.targets }}

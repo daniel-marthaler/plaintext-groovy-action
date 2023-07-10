@@ -6,7 +6,7 @@ on:
 permissions: write-all
 
 jobs:
-  prep:
+  run:
     runs-on: ubuntu-latest
     outputs:
       targets: ${{ steps.read-targets.outputs.targets }}
@@ -20,3 +20,5 @@ jobs:
         uses: daniel-marthaler/plaintext-groovy-action@master
         with:
           SCRIPT: go.groovy
+        env:
+          TOKEN: ${{ secrets.TOKEN }}

@@ -21,6 +21,4 @@ runs:
         -e SCRIPT="${{ inputs.script }}" \
         -v "${{ github.workspace }}:/workspace" \
         ghcr.io/daniel-marthaler/plaintext-groovy-action:master
-      env:
-        TOKEN: ${{ secrets.TOKEN }}
    

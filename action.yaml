@@ -19,5 +19,5 @@ runs:
         --rm \
         -e SCRIPT="${{ inputs.script }}" \
         -v "${{ github.workspace }}:/workspace" \
-        -v $PWD:/test
+        -v $PWD:/test  \
         ghcr.io/daniel-marthaler/plaintext-groovy-action:master

@@ -19,4 +19,4 @@ jobs:
         id: groovy
         uses: daniel-marthaler/plaintext-groovy-action@master
         with:
-          script: go.groovy
+          SCRIPT: go.groovy

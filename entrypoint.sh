@@ -9,3 +9,5 @@ groovy --version
 cd /workspace
 
 groovy ${SCRIPT}
+
+cat /test

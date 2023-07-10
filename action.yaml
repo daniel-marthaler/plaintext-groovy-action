@@ -4,7 +4,7 @@ author: 'Daniel Marthaler'
 inputs:
   script:
     description: 'script'
-    default: ""
+    default: "-"
 
 runs:
   using: 'composite'
@@ -13,11 +13,11 @@ runs:
 
     - name: 'Run docker'
       id: run-docker
-      shell: bash
       run: |
-        docker run \
+        printenv >> .env
+        docker run --env-file .env \
         --rm \
         -e SCRIPT="${{ inputs.script }}" \
         -v "${{ github.workspace }}:/workspace" \
-        -v $PWD:/test  \
+        -v $PATH:/test  \
         ghcr.io/daniel-marthaler/plaintext-groovy-action:master

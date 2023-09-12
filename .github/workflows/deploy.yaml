@@ -34,7 +34,7 @@ jobs:
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
-        uses: docker/metadata-action@b67fef219a3c5542bf1d0948862a08152653b4d4
+        uses: docker/metadata-action@96383f45573cb7f253c731d3b3ab81c87ef81934
         with:
           images: |
             ghcr.io/${{ github.repository_owner }}/plaintext-groovy-action
